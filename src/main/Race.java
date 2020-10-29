@@ -15,17 +15,17 @@ public class Race {
 		
 		while ((rabbit.getRabbit().isAlive() || tortoise.getTortoise().isAlive())) {
 
-			if (tortoise.getRaceTimeTortoise() < rabbit.getRaceTimeRabbit()) {
+			if (tortoise.getRaceTime() < rabbit.getRaceTime()) {
                 winner = "TORTOISE";
-            } else if(tortoise.getRaceTimeTortoise() == rabbit.getRaceTimeRabbit()){
+            } else if(tortoise.getRaceTime() == rabbit.getRaceTime()){
                 winner = "NOBODY";
             } else {
                 winner = "RABBIT";
             }
 		}
 		
-		System.out.println("Rabbit has completed the race in " + rabbit.getRaceTimeRabbit() + " seconds.");
-	    System.out.println("Tortoise has completed the race in " + tortoise.getRaceTimeTortoise() + "seconds.");
+		System.out.println("Rabbit has completed the race in " + rabbit.getRaceTime() + " seconds.");
+	    System.out.println("Tortoise has completed the race in " + tortoise.getRaceTime() + "seconds.");
 		JOptionPane.showMessageDialog(null, winner + " HAS WON THE RACE.", "RESULT", JOptionPane.INFORMATION_MESSAGE);
     }
 }

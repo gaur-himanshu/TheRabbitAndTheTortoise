@@ -23,5 +23,8 @@ public class Race {
                 winner = "RABBIT";
             }
 		}
+		System.out.println("Rabbit has completed the race in " + rabbit.getRaceTimeRabbit() + " seconds.");
+	    System.out.println("Tortoise has completed the race in " + tortoise.getRaceTimeTortoise() + "seconds.");
+		JOptionPane.showMessageDialog(null, winner + " HAS WON THE RACE.", "RESULT", JOptionPane.INFORMATION_MESSAGE);
     }
 }

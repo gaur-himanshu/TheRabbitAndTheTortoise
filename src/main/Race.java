@@ -12,5 +12,16 @@ public class Race {
         rabbit.getRabbit().start();
 		Tortoise tortoise = new Tortoise;
 		tortoise.getTortoise().start();
+		
+		while ((rabbit.getRabbit().isAlive() || tortoise.getTortoise().isAlive())) {
+
+			if (tortoise.getRaceTimeTortoise() < rabbit.getRaceTimeRabbit()) {
+                winner = "TORTOISE";
+            } else if(tortoise.getRaceTimeTortoise() == rabbit.getRaceTimeRabbit()){
+                winner = "NOBODY";
+            } else {
+                winner = "RABBIT";
+            }
+		}
     }
 }

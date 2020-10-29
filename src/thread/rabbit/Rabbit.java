@@ -39,6 +39,7 @@ public class Rabbit implements Runnable {
                     System.out.println("The Rabbit is leading and hence is going to sleep!");
                     try {
                         Thread.sleep(9000L);
+						raceTime += 9;
                     } catch (InterruptedException e) {
                         System.err.println("The Rabbit's sleep got interrupted!");
                     }
@@ -49,6 +50,7 @@ public class Rabbit implements Runnable {
             }
             try {
                 Thread.sleep(1500L);
+				racetime += 1.5;
             } catch (InterruptedException e) {
                 System.err.println("The rabbit has lost the path!");
             }

@@ -8,6 +8,10 @@ public class Rabbit implements Runnable {
 
     private final Thread rabbit;
 	private float raceTime;
+	
+	public float getRaceTime() {
+		return raceTime;
+	}
 
     public Rabbit() {
         this.rabbit = new Thread(this, "Rabbit");
